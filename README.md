@@ -271,7 +271,7 @@ It's important to keep a field reference to the `CountryPickerView` instance els
 class DemoViewController: UIViewController {
 
     // Keep a field reference
-    let countryPickerView = CountryPickerView()
+    let countryPickerView = CountryPickerView.loadFromNib()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -299,7 +299,7 @@ Don't forget to set a delegate to be notified when the use selects a country fro
 You can create `Country` instances with any of these methods in `CountryPickerView` class:
 
 ```swift
-let countryPickerView = CountryPickerView()
+let countryPickerView = CountryPickerView.loadFromNib()
 let country = countryPickerView.getCountryByName("Nigeria")
 let country2 = countryPickerView.getCountryByCode("NG")
 let country3 = countryPickerView.getCountryByPhoneCode("+234")
@@ -308,7 +308,7 @@ let country3 = countryPickerView.getCountryByPhoneCode("+234")
 You can also set the selected country using these helper methods:
 
 ```swift
-let countryPickerView = CountryPickerView()
+let countryPickerView = CountryPickerView.loadFromNib()
 countryPickerView.setCountryByName("Nigeria")
 countryPickerView.setCountryByCode("NG")
 countryPickerView.setCountryByPhoneCode("+234")

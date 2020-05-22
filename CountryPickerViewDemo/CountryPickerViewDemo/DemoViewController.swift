@@ -24,7 +24,7 @@ class DemoViewController: UITableViewController {
     @IBOutlet weak var phoneNumberField: UITextField!
     weak var cpvTextField: CountryPickerView!
     @IBOutlet weak var cpvIndependent: CountryPickerView!
-    let cpvInternal = CountryPickerView()
+    let cpvInternal = CountryPickerView.loadFromNib()
     
     @IBOutlet weak var presentationStyle: UISegmentedControl!
     @IBOutlet weak var selectCountryButton: UIButton!

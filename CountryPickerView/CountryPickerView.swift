@@ -35,7 +35,7 @@ public func !=(lhs: Country, rhs: Country) -> Bool {
 }
 
 
-public class CountryPickerView: NibView {
+public class CountryPickerView: UIView, NibLoadable {
     @IBOutlet weak var spacingConstraint: NSLayoutConstraint!
     @IBOutlet public weak var flagImageView: UIImageView! {
         didSet {
@@ -108,16 +108,6 @@ public class CountryPickerView: NibView {
             delegate?.countryPickerView(self, didSelectCountry: newValue)
             setup()
         }
-    }
-    
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-        setup()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setup()
     }
     
     func setup() {
